@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 const Button = () => {
+  // react variable - hover, count
   const [count, setCount] = useState(0);
-  const [hovered, setHovered] = useState(false);
-
+  const [hovered, setHover] = useState(false);
+  
+  
+  // prop functions to give action
   const handleClick = () => {
-    console.log("Clicked!");
-    setCount(count + 1);
-  };
-
+    setCount(count+1);
+    console.log('Handle Click called');
+  }
+  
   const handleMouseEnter = () => {
-    setHovered(true);
-  };
-
+    setHover(true);
+    console.log('Mouse Enter Event');
+  }
+  
   const handleMouseLeave = () => {
-    setHovered(false);
-  };
-
+    setHover(false);
+    console.log('Mouse Leave Event');
+  }
+  
   const buttonStyle = {
     backgroundColor: hovered ? "blue" : "green",
     color: "white",
@@ -25,19 +30,15 @@ const Button = () => {
     borderRadius: "4px",
     cursor: "pointer",
   };
-
+  // style
+  
+  
   return (
-    <button
-      style={buttonStyle}
-      onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {count === 0
-        ? "Click me!"
-        : `Clicked ${count} time${count === 1 ? "" : "s"}`}
-    </button>
-  );
-};
+    <button style = {buttonStyle}
+     onClick={handleClick}
+     onMouseEnter={handleMouseEnter} 
+     onMouseLeave={handleMouseLeave}>Clicked {count} times</button>
+  )
+}
 
 export default Button;

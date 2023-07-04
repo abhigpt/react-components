@@ -1,10 +1,11 @@
 import "./styles.css";
-import Button from "./Button";
+import InputField from "./InputField";
 
 export default function App() {
   return (
     <div className="App">
-      <Button />
+      {/* <Button /> */}
+      <InputField />
     </div>
   );
 }
