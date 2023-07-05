@@ -1,10 +1,14 @@
 import "./styles.css";
-
+// import InputField from "./InputField";
+// import CheckboxComponent from "./CheckboxComponent";
+import RadioComponent from "./RadioComponent";
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      {/* <Button /> */}
+      {/* <InputField /> */}
+      {/* <CheckboxComponent/> */}
+      <RadioComponent />
     </div>
   );
 }
